@@ -3,7 +3,7 @@
 ## Integrantes:
 ## Integrantes:
 + `Alondra Acosta      ` ROL: <br>
-+ `Isidora Sarmiento   ` ROL: <br>
++ `Isidora Sarmiento   ` ROL: 202273650-k <br>
 + `María Marín         ` ROL: <br>
 + `Rodrigo Ramírez     ` ROL: 202273526-0 <br>
   

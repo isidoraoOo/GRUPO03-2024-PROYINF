@@ -8,7 +8,7 @@
 **[Presentacion del cliente](https://www.youtube.com/watch?v=abJau21SDIk)**
 
 ## Enlace a la wiki de trabajo:
-**[Enlace a Wiki]()**
+**[Enlace a Wiki](https://github.com/isidoraoOo/GRUPO03-2024-PROYINF/wiki)**
 
 ## Consideraciones:
 ---

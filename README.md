@@ -1,5 +1,3 @@
-*recordatorio: Hay que cambiar el nombre a "GRUPO03-2024-PROYINF"*
-
 ## Integrantes:
 + `Alondra Acosta      ` ROL: 202273524-4<br>
 + `Isidora Sarmiento   ` ROL: 202273650-k <br>

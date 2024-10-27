@@ -14,4 +14,6 @@
 **[Presentacion del cliente](https://www.youtube.com/watch?v=abJau21SDIk)**
 
 ## Consideraciones:
----
+
+**[Instructivo de la aplicación web](https://github.com/isidoraoOo/GRUPO03-2024-PROYINF/wiki/Instructivo)**
+

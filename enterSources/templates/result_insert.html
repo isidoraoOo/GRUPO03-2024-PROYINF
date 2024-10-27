@@ -1,0 +1,27 @@
+<html>
+    <body>
+        <p>Estas tratando de insertar: <strong>{{ query }}</strong></p>
+
+        {% if sources %}
+
+            <p>Fuente encontrada: {{ sources|length }} sources</p>
+
+            <ul>
+                {% for source in sources %}
+                <li>
+                    <a href="{{ source.link }}">{{ source.name }}</a>  <!-- Correcto acceso a los atributos del objeto 'source' -->
+                </li>
+                {% endfor %}
+            </ul>
+
+            <p>{{ message }}</p>  <!-- Correcta inserción de 'message' -->
+
+        {% else %}
+
+            <p>Fuente no encontrada</p>
+            <p>{{ message }}</p>  <!-- Correcta inserción de 'message' -->
+
+        {% endif %}
+    </body>
+</html>
+<!-- agregar_fuente.html -->

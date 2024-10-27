@@ -5,53 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agregar Fuente</title>
     <a href="../">Inicio</a>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 20px;
-        }
-        .container {
-            max-width: 500px;
-            background-color: white;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            margin: auto;
-        }
-        h1 {
-            text-align: center;
-            color: #333;
-        }
-        label {
-            margin-top: 10px;
-            display: block;
-        }
-        input[type="text"], textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 5px 0;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        button {
-            background-color: #5cb85c;
-            color: white;
-            padding: 10px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            width: 100%;
-        }
-        button:hover {
-            background-color: #4cae4c;
-        }
-        .message {
-            text-align: center;
-            margin-top: 20px;
-        }
-    </style>
 </head>
 <body>
     <div class="container">
@@ -66,13 +19,6 @@
             {% endfor %}
             <button type="submit">Agregar</button>
         </form>
-        {% if messages %}
-            <div class="message">
-                {% for message in messages %}
-                    <p>{{ message }}</p>
-                {% endfor %}
-            </div>
-        {% endif %}
     </div>
 </body>
 </html>

@@ -15,7 +15,7 @@ def service(request):
         if form1.is_valid():
             form1.save()
             messages.success(request, 'Fuente agregada exitosamente.')
-            return redirect('../result_insert/')  # Redirigir a una página de éxito o lista
+            return redirect('../result_insert/')  # Redirigir a una página de éxito.
     else:
         messages.error(request, 'Hubo un error al agregar la fuente. Por favor, revisa los campos.')
         form1 = Bulletin_request()

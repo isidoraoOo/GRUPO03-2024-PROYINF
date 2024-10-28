@@ -1,8 +1,8 @@
 from django.urls import path
 from enterSources import views
 
-urlpatterns = {
-    path('', views.home),
-    path('insert/', views.service),
-    path('result_insert/', views.result_insert),
-}
+urlpatterns = [
+    path('', views.home, name='home'), 
+    path('insert/', views.service, name='insert'), 
+    path('result_insert/', views.result_insert, name='result_insert') 
+]

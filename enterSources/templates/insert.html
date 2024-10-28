@@ -1,3 +1,5 @@
+<!-- insert.html -->
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -56,16 +58,21 @@
 <body>
     <div class="container">
         <h1>Agregar Fuente</h1>
+        
         <form method="post">
             {% csrf_token %}
-            {{ form.non_field_errors }}
-            {% for field in form %}
-                <label for="{{ field.id_for_label }}">{{ field.label }}</label>
-                {{ field }}
-                {{ field.errors }}
-            {% endfor %}
+            
+            <label for="{{ form.link.id_for_label }}">{{ form.link.label }}</label>
+            {{ form.link }}
+            {{ form.link.errors }}
+        
+            <label for="{{ form_cat.category.id_for_label }}">{{ form_cat.category.label }}</label>
+            {{ form_cat.category }}
+            {{ form_cat.category.errors }}
+        
             <button type="submit">Agregar</button>
         </form>
+        
         {% if messages %}
             <div class="message">
                 {% for message in messages %}

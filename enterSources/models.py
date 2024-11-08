@@ -29,7 +29,7 @@ class Categories(models.Model):
     )
 
     def __str__(self):
-        return self.category
+        return "Categoria/s: %s." % (self.category)
 
 #  Fixes ManyToMany relationship
 class Cat_x_Source(models.Model):
@@ -37,4 +37,4 @@ class Cat_x_Source(models.Model):
     category = models.ForeignKey(Categories, on_delete=models.CASCADE)
 
     def __str__(self):
-        return f"{self.source.link} - {self.category.category}"
+        return "La fuente %s pertenece a la categoria/s %s" % (self.source.link, self.category.category)

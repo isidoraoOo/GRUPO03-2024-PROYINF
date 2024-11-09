@@ -40,4 +40,5 @@ def service(request):
     return render(request, 'insert.html', {'form': form1, 'form_cat':form2})
 
 def result_insert(request):
-    return render(request, "index.html")
+    return redirect('home')
+

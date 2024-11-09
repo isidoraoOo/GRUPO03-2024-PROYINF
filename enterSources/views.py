@@ -1,7 +1,4 @@
-# views.py
-
 from django.shortcuts import render, redirect
-# from django.contrib.auth.decorators import login_required, permission_required
 from django.contrib import messages
 from django.http import HttpResponse
 from enterSources.models import Sources, Categories, Cat_x_Source
@@ -12,8 +9,6 @@ from enterSources.forms import Bulletin_request, Cat_request
 def home(request):
     return render(request, "index.html")
 
-# @login_required
-# @permission_required('app.permission_insert_source')
 def service(request):
     if request.method == 'POST':
         form1 = Bulletin_request(request.POST)
@@ -45,5 +40,4 @@ def service(request):
     return render(request, 'insert.html', {'form': form1, 'form_cat':form2})
 
 def result_insert(request):
-    return HttpResponse("Exito al ingresar la fuente de datos.")
-
+    return render(request, "index.html")

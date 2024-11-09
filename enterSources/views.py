@@ -45,5 +45,5 @@ def service(request):
     return render(request, 'insert.html', {'form': form1, 'form_cat':form2})
 
 def result_insert(request):
-    return HttpResponse("Exito al ingresar la fuente de datos.")
+    return redirect('home')
 

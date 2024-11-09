@@ -44,9 +44,9 @@
     <h1 class="pr">VIGIFIA</h1>  
     <h3 class="tex2">La nueva página para realizar solicitudes de boletines.</h3>
     <div class="container">
-      <a href="{% url 'insert' %}" class="boton">ingresar fuentes</a>
 
       {% if user.is_authenticated %}
+        <a href="{% url 'insert' %}" class="boton">ingresar fuentes</a>
         <a href="{% url 'logout' %}" class="boton">Logout</a>
       {% else %}
         <a href="{% url 'login' %}" class="boton">Login</a>

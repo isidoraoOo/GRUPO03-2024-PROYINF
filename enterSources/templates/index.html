@@ -53,6 +53,10 @@
       <img src="{% static 'images/fia_logo.png' %}" alt="Logo de VIGIFIA" style="max-width: 100%; height: auto;">
     </div>
 
+    {% block content %}
+    <!-- Este bloque será reemplazado por el contenido de las plantillas que extienden index.html -->
+    {% endblock %}
+
     <h1 class="pr">VIGIFIA</h1>
     <h3 class="tex2">La nueva página para realizar solicitudes de boletines.</h3>
     <div class="container">

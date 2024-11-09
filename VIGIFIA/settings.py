@@ -39,6 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'VIGIFIA',
     'enterSources',
+    'authentication',
+    'APIS',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -80,7 +83,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'sources',
         'USER': 'postgres',
-        'PASSWORD': '2008', #cambien la contraseña
+        'PASSWORD': '', #cambien la contraseña
         'HOST': 'localhost',
         'PORT': '5432',
     }

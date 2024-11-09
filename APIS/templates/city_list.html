@@ -1,0 +1,29 @@
+<!-- city_list.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>City Air Quality</title>
+</head>
+<body>
+    <h1>City Air Quality</h1>
+    
+    <table border="1">
+        <thead>
+            <tr>
+                <th>City Name</th>
+                <th>Air Quality</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for city in cities %}
+                <tr>
+                    <td>{{ city.name }}</td>
+                    <td>{{ city.air_quality }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,5 +1,3 @@
-# views.py
-
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.http import HttpResponse
@@ -42,5 +40,5 @@ def service(request):
     return render(request, 'insert.html', {'form': form1, 'form_cat':form2})
 
 def result_insert(request):
-    return HttpResponse("Exito al ingresar la fuente de datos.")
+    return redirect('home')
 

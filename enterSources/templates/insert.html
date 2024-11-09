@@ -55,7 +55,10 @@
         }
     </style>
 </head>
+
 <body>
+
+    {% if user.is_authenticated %}
     <div class="container">
         <h1>Agregar Fuente</h1>
         
@@ -79,7 +82,14 @@
                     <p>{{ message }}</p>
                 {% endfor %}
             </div>
-        {% endif %}
-    </div>
+            {% endif %}
+        </div>
+
+
+    {% else %}
+        <h5>Inicie sesión para ingresar al ingreso de fuentes</h5>
+        <a href="{% url 'login' %}" class="boton">Login</a>
+
+    {% endif %}
 </body>
 </html>

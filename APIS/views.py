@@ -31,3 +31,6 @@ def city_list_view(request):
 
     # Pasa los datos de las ciudades a la plantilla
     return render(request, 'city_list.html', {'cities': cities})
+
+def map(request):
+    return render(request, 'TEST1.html')

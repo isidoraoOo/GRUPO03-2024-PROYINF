@@ -7,7 +7,7 @@ from enterSources.forms import Bulletin_request, Cat_request
 # Create your views here.
 def home(request):
     if request.user.is_authenticated:
-        return render(request, "index.html")  # O alguna página principal
+        return render(request, "index.html")
     return redirect('login')
 
 def service(request):

@@ -5,9 +5,10 @@ from enterSources.models import Sources, Categories, Cat_x_Source
 from enterSources.forms import Bulletin_request, Cat_request
 
 # Create your views here.
-
 def home(request):
-    return render(request, "index.html")
+    if request.user.is_authenticated:
+        return render(request, "index.html")  # O alguna página principal
+    return redirect('login')
 
 def service(request):
     if request.method == 'POST':

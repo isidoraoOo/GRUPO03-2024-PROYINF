@@ -58,7 +58,8 @@
     <h3 class="tex2">La nueva página para realizar solicitudes de boletines.</h3>
     <div class="container">
       {% if user.is_authenticated %}
-      <a href="{% url 'insert' %}" class="boton">ingresar fuentes</a>
+        <a href="{% url 'insert' %}" class="boton">Ingresar fuentes</a>
+        <a href="{% url 'select' %}" class="boton">Seleccionar fuentes</a>
       {% else %}
       <h4 class="tex2">Asegurate de acceder primero.</h4>
       {% endif %}

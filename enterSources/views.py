@@ -43,3 +43,20 @@ def service(request):
 def result_insert(request):
     return redirect('home')
 
+def select(request):
+    sources = []
+    if request.method == "POST":
+        category_name = request.POST.get('category_name', '').strip()  # Capturar el input del usuario
+
+        if category_name:
+            try:
+                category = Categories.objects.get(category__icontains=category_name)
+
+                cat_sources = Cat_x_Source.objects.filter(category=category)
+
+                sources = Sources.objects.filter(id__in=cat_sources.values('source'))
+
+            except Categories.DoesNotExist:
+                sources = []
+
+    return render(request, 'select.html', {'sources': sources})

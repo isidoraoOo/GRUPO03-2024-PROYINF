@@ -46,7 +46,7 @@ def result_insert(request):
 def select(request):
     sources = []
     if request.method == "POST":
-        category_name = request.POST.get('category_name', '').strip()  # Capturar el input del usuario
+        category_name = request.POST.get('category_name', '').strip()
 
         if category_name:
             try:

@@ -1,0 +1,152 @@
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Historial</title>
+    <link rel="icon" type="image/png" href="plant.png">
+
+    <script src="https://kit.fontawesome.com/f936906ae0.js" crossorigin="anonymous"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script> <!-- revisar q hace -->
+
+    <style>
+      body {
+        background-color: white;
+      }
+
+      @font-face {
+        font-family: 'ktegaki';
+        src: url(https://cloverbell.neocities.org/ktegaki/ktegaki-webfont.woff) format('woff');
+      }
+
+      ::-webkit-scrollbar {
+        width: 8px;
+        background: transparent;
+        border: 0px;
+        height: 10px;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: url('plant.png');
+        background-size: contain;
+      }
+
+      body {
+        background-color: #f7f7da;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        font-family: 'ktegaki';
+        color: #262e05;
+        font-size: 20.5px;
+      }
+
+      hr {
+        border: 1.5px solid #607c3c;
+      }
+
+      a:link {
+        color: #404e09;
+        text-decoration: none;
+      }
+
+      a:visited {
+        color: gray;
+      }
+
+      a:hover {
+        color: #a6b959;
+      }
+
+      a:active {
+        color: #404e09;
+      }
+
+      ::selection {
+        background-color: #fcebde;
+      }
+
+      .container {
+        background-size: cover;
+        position: absolute;
+        width: 1300px;
+        height: 715px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .historial {
+        position: absolute;
+        width: 745px;
+        height: 520px;
+        right: 10px;
+        bottom: 100px;
+        overflow: fixed;
+      }
+
+      .indice {
+        position: absolute;
+        width: 305px;
+        height: 470px;
+        left: 55px;
+        top: 100px;
+        padding: 10px;
+        overflow: scroll;
+      }
+
+      .header {
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 93%;
+        height: 20px;
+        overflow: fixed;
+        padding: 8px;
+        font-size: 25px;
+      }
+
+    </style>
+  </head>
+
+  <body>
+  <div class="container">
+
+      <div class="indice">
+
+        <div class="header">Noviembre 2024</div>
+
+        <br>
+        <a href="https://yakkun.com/sm/zukan/n470" target="page">
+          <b>07/11/2024</b>
+          Solicitud N.002
+        </a>
+
+        <br><hr>
+
+        <div class="header">Octubre 2024</div>
+
+        <br>
+        <a href="https://www.pc98.org/main.html" target="page">
+          <b>30/10/2024</b>
+          Solicitud N.001
+        </a>
+
+        <br><hr>
+
+        <div class="header">Historial</div>
+
+        <br>
+        <a href="{% url 'main_entry' %}" target="page">
+          <b> . . . </b>
+
+        <hr>
+
+      </div>
+
+
+      <div class="historial">
+        <iframe src="{% url 'main_entry' %}" name="page" width="445" height="520" style="border:none;"></iframe>
+      </div>
+
+    </div>
+  </body>
+</html>

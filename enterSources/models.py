@@ -12,6 +12,8 @@ class Sources(models.Model):
         null = False    # Cannot be null
     )
 
+    resumen = models.TextField()
+
     created_at = models.DateTimeField(
         auto_now_add = True,  # Automatically set the field to now when the object is first created
         verbose_name = "Fecha de creación"

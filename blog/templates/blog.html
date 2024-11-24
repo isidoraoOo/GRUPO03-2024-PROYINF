@@ -1,0 +1,49 @@
+{% extends "index.html" %}
+
+{% load static %}
+
+{% block content %}
+
+    {% for post in posts %}
+    <section class="page-section clearfix">
+        <div class="container">
+            <article class="intro">
+                {% if post.image %}
+                    <img 
+                        class="intro-img img-fluid mb-3 mb-lg-0 rounded" 
+                        src="{{ post.image.url }}" 
+                        alt="{{ post.title }}" 
+                        style="width: 50%; max-width: 100%; height: auto;">
+                {% endif %}
+                <div class="intro-text text-center bg-faded p-5 rounded">
+                    <h2 class="section-heading mb-4">
+                        <span class="section-heading-lower">{{ post.title }}</span>
+                    </h2>
+                    <p class="mb-3">{{ post.content }}</p>
+                    <p class="text-muted" style="font-size: 0.8rem; text-align: left;">
+                        Autor: <strong>{{ post.author }}</strong>
+                    </p>
+                </div>
+            </article>
+        </div>
+    </section>
+    {% endfor %}
+
+    <aside>
+        <div class="container my-4">
+            <div class="text-center">
+                <h3 class="text-success">Categorías:</h3>
+                <div class="d-flex flex-wrap justify-content-center mt-3">
+                    {% for post in posts %}
+                        {% for category in post.categories.all %}
+                            <span class="badge bg-secondary text-light m-1" style="font-size: 0.9rem;">
+                                {{ category.title }}
+                            </span>
+                        {% endfor %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </aside>
+
+{% endblock %}

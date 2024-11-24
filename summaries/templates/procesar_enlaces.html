@@ -1,0 +1,9 @@
+<h1>Enlaces y Resúmenes</h1>
+<ul>
+    {% for enlace in enlaces %}
+        <li>
+            <strong>URL:</strong> <a href="{{ enlace.link }}">{{ enlace.link }}</a><br>
+            <strong>Resumen:</strong> {{ enlace.resumen }}
+        </li>
+    {% endfor %}
+</ul>

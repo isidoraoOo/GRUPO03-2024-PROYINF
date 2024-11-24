@@ -1,0 +1,26 @@
+<form method="post" action="">
+    {% csrf_token %}
+    <label for="category_name">Categoría:</label>
+    <input type="text" name="category_name" id="category_name" placeholder="Ingresa una categoría">
+    <button type="submit">Buscar</button>
+</form>
+
+<h2>Resultados:</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Enlace</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for source in sources %}
+        <tr>
+            <td><a href="{{ source.link }}" target="_blank">{{ source.link }}</a></td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="1">No se encontraron resultados.</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>

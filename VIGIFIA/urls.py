@@ -28,6 +28,7 @@ urlpatterns = [
     path('authentication/', include('authentication.urls')),
     path('blog/', include('blog.urls')),
     path('summaries/', include('summaries.urls')),
+    path('archive/', include('archive.urls')),
 ]
 
 if settings.DEBUG:

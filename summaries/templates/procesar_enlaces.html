@@ -1,9 +1,27 @@
+{% extends "base.html" %}
+{% block title %}Resúmenes{% endblock %}
+
+{% block styles %}
+<style>
+
+    body{
+        font-size: 15.5px;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<main>
+    
 <h1>Enlaces y Resúmenes</h1>
 <ul>
     {% for enlace in enlaces %}
         <li>
             <strong>URL:</strong> <a href="{{ enlace.link }}">{{ enlace.link }}</a><br>
-            <strong>Resumen:</strong> {{ enlace.resumen }}
+            <strong>Resumen:</strong> {{ enlace.resumen }} <br><br>
         </li>
     {% endfor %}
 </ul>
+
+</main>
+{% endblock %}

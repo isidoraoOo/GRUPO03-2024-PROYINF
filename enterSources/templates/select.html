@@ -1,3 +1,9 @@
+{% extends "base.html" %}
+{% block title %}Selección de Fuentes{% endblock %}
+
+{% block content %}
+<main>
+
 <form method="post" action="">
     {% csrf_token %}
     <label for="category_name">Categoría:</label>
@@ -24,3 +30,6 @@
         {% endfor %}
     </tbody>
 </table>
+
+</main>
+{% endblock %}

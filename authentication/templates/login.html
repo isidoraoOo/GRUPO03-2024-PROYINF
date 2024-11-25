@@ -1,34 +1,61 @@
-{% block content %}
+{% extends 'base.html' %}
+{% block title %}Log In{% endblock %}
 
 <head>
-  
-  <meta charset="utf-8">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Acceso</title>
+  
   {% load static %}
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <link rel = "stylesheet" href="{% static 'style.css'%}">
+  
+  {% block styles %}
   <style>
-    .btn{
-        padding: 4px 8px;
-        font-size: 0.875rem;
-        background-color: #5cb85c;
-    }
-  </style>
 
-  <title>Log In</title>
+    .container{
+      padding-top: 8vh;
+      justify-content: center;
+      align-content: center;
+      width: 90vh;
+    }
+
+    .container2{
+      justify-content: center;
+      align-content: center;
+      width: 86vh;
+    }
+
+    .mb3{
+      border-color: #88ae4c;
+      border-radius: 4px;
+      width: 100%;
+    }
+
+    .btn {
+      background-color: #88ae4c;
+      color: #f0efb3;
+      padding: 10px;
+
+      border: none;
+      border-radius: 4px;
+      
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .btn:hover {
+      background-color: #f0efb3;
+      color: #88ae4c;
+    }
+
+  </style>
+  {% endblock%}
+
 </head>
 
+{% block content %}
 <body>
-  <div class="cuadrado">
-  </div>
-  <div class="imagen">
-    <img src="{% static 'images/fia_logo.png' %}" alt="Logo de VIGIFIA" style="max-width: 100%; height: auto;">
-  </div>
-  <h1 class="pr" style="font-size: 3rem;">Accede a la plataforma</h1>
+  
     <form action="" method="post">
         {% csrf_token %}
 
@@ -45,23 +72,30 @@
             {% endif %}
         </div>
         
-        <div class="container">
-          <div class="mb-3">
-            <label for="username" class="form-label">Usuario</label>
-            <input type="text" class="form-control" name="username" required>
-          </div>
+      <div class="container">
+          <h1 class="pr" style="font-size: 3rem;">Accede a la plataforma</h1>
 
-          <br>
+        <div class="container2">
+            <div class="mb-3">
+              <label for="username" class="form-label">Usuario</label>
+              <input type="text" class="form-control" name="username" required>
 
-          <div class="mb-3">
-            <label for="password" class="form-label">Contraseña</label>
-            <input type="password" class="form-control" name="password" required>
+            <br>
+
+            <div class="mb-3">
+              <label for="password" class="form-label">Contraseña</label>
+              <input type="password" class="form-control" name="password" required>
+            </div>
+
+            <div class="d-flex justify-content-center">
+              <button type="submit" class="btn">Ingresar</button>
+            </div>
           </div>
+          
         </div>
-        <div class="d-flex justify-content-center">
-          <button type="submit" class="btn">Ingresar</button>
-        </div>
-    
+
+        
+      </div>
     </form>
 </body>
 {% endblock %}

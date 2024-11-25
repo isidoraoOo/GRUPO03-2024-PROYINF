@@ -18,6 +18,11 @@ class Category(models.Model):
 class Post(models.Model):
     title = models.CharField(max_length=100)
     content = models.CharField(max_length=1000)
+    link = models.URLField(
+        unique = True,  # Ensures the link is unique
+        blank = False,  # Cannot be empty
+        null = False    # Cannot be null
+    )
     image = models.ImageField(upload_to="blog/", null=True, blank=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     categories = models.ManyToManyField(Category)

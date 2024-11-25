@@ -1,35 +1,39 @@
-<!-- insert.html -->
+{% extends "base.html" %}
+{% block title %}Ingresar Fuentes{% endblock %}
 
-<!DOCTYPE html>
-<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agregar Fuente</title>
-    <a href="../">Inicio</a>
+    
+    {% block styles %}
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 20px;
+
+        main{
+            padding-top: 8vh;
+            min-height: 70vh; 
         }
+
         .container {
             max-width: 500px;
             background-color: white;
+            font-size: 15px;
+
             padding: 20px;
+            padding-top: 40px;
+
             border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 5px rgba(233, 245, 204, 0.1);
             margin: auto;
         }
+
         h1 {
             text-align: center;
             color: #333;
         }
+
         label {
             margin-top: 10px;
             display: block;
         }
+
         input[type="text"], textarea {
             width: 100%;
             padding: 10px;
@@ -37,26 +41,28 @@
             border: 1px solid #ccc;
             border-radius: 4px;
         }
+
         button {
-            background-color: #5cb85c;
-            color: white;
+            background-color: #88ae4c;
+            color: #f0efb3;
             padding: 10px;
             border: none;
             border-radius: 4px;
             cursor: pointer;
             width: 100%;
         }
+
         button:hover {
-            background-color: #4cae4c;
+            background-color: #f0efb3;
+            color: #88ae4c;
         }
-        .message {
-            text-align: center;
-            margin-top: 20px;
-        }
+
     </style>
+    {% endblock %}
 </head>
 
-<body>
+{% block content %}
+<main>
 
     {% if user.is_authenticated %}
     <div class="container">
@@ -82,7 +88,7 @@
                     <p>{{ message }}</p>
                 {% endfor %}
             </div>
-            {% endif %}
+        {% endif %}
         </div>
 
 
@@ -91,5 +97,7 @@
         <a href="{% url 'login' %}" class="boton">Login</a>
 
     {% endif %}
-</body>
-</html>
+    </div>
+
+</main>
+{% endblock %}

@@ -1,27 +1,32 @@
 {% extends "index.html" %}
+
 {% load static %}
 
 {% block content %}
 
     {% for post in posts %}
-    <section class="page-section clearfix">
+    <section class="page-section clearfix" style="margin-bottom: 5rem;">
         <div class="container">
-            <article class="intro">
+            <article class="row align-items-center mb-4">
                 {% if post.image %}
+                <div class="col-md-4 mb-3 mb-md-0">
                     <img 
-                        class="intro-img img-fluid mb-3 mb-lg-0 rounded" 
+                        class="img-fluid rounded" 
                         src="{{ post.image.url }}" 
                         alt="{{ post.title }}" 
-                        style="width: 50%; max-width: 100%; height: auto;">
+                        style="width: 100%; max-height: 250px; object-fit: cover;">
+                </div>
                 {% endif %}
-                <div class="intro-text text-center bg-faded p-5 rounded">
-                    <h2 class="section-heading mb-4">
+                <div class="col-md-8">
+                    <h2 class="section-heading mb-3">
                         <span class="section-heading-lower">{{ post.title }}</span>
                     </h2>
-                    <p class="mb-3">{{ post.content }}</p>
-                    <p class="text-muted" style="font-size: 0.8rem; text-align: left;">
-                        link = <strong>{{post.link}}</strong>
-                        Autor: <strong>{{ post.author }}</strong>
+                    <p class="mb-3">
+                        {{ post.content|truncatewords:30 }} 
+                        <a href="{{ post.link }}" class="text-primary">Leer más</a>
+                    </p>
+                    <p class="text-muted" style="font-size: 0.9rem;">
+                        <strong>Autor:</strong> {{ post.author }}
                     </p>
                 </div>
             </article>

@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block title %}Historial{% endblock %}
+{% load static %}
+
+{% block styles %}
+    <style>
+
+      .historial {
+        width: 745px;
+        height: 520px;
+        right: 10px;
+        bottom: 100px;
+        overflow-y: scroll;
+      }
+
+      .indice {
+        width: 305px;
+        height: 470px;
+        padding: 10px;
+        overflow-y: scroll;
+      }
+      
+    </style>
+{% endblock %}
+
+{% block content %}
+<main>
+  <div class="container">
+    <div class="indice">
+      <div class="header">Noviembre 2024</div>
+      <br>
+      <a href="https://yakkun.com/sm/zukan/n470" target="page">
+        <b>07/11/2024</b> Solicitud N.002
+      </a>
+      <br><hr>
+
+      <div class="header">Octubre 2024</div>
+      <br>
+      <a href="https://www.pc98.org/main.html" target="page">
+        <b>30/10/2024</b> Solicitud N.001
+      </a>
+      <br><hr>
+
+      <div class="header">Historial</div>
+      <br>
+      <a href="{% url 'main_entry' %}" target="page">
+        <b> . . . </b>
+      </a>
+      <hr>
+    </div>
+
+    <div class="historial">
+      <!-- Aquí podrías agregar más contenido si lo deseas -->
+    </div>
+  </div>
+</main>
+{% endblock %}

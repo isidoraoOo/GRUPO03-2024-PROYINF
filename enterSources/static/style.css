@@ -1,0 +1,62 @@
+
+html body {
+
+    background-color: rgb(255, 255, 255);
+    font-family: 'Forum', sans-serif;
+    font-style: normal;
+
+}
+.cuadrado {
+    width: 100%; /* O ajusta a un tamaño fijo, por ejemplo: 200px */
+    height: 5vh; /* Altura del cuadrado */
+    background-color: rgb(16, 128, 38); /* Color del cuadrado */
+    display: flex; /* Habilita Flexbox */
+    align-items: center; /* Centra verticalmente el contenido */
+    justify-content: flex-end; /* Alinea horizontalmente a la izquierda */
+    padding-right: 3vh; /* Agrega un poco de espacio a la izquierda */
+    
+}
+
+.tex1 {
+    color: white;
+}
+
+.tex2 {
+    text-align: center;
+    font-weight: 550;
+    font-size: 2.5vh;
+}
+
+.pr {
+    text-align: center;
+    font-weight: 700;
+    font-size: 11vh;
+    margin-top: 1vh;
+    color:rgb(11, 95, 28)
+}
+
+.boton {
+    display: inline-block; /* Para que se comporte como un botón */
+    padding: 1.3vh 2vh; /* Espaciado interno */
+    background-color: #4c944c; /* Color de fondo */
+    color: white; /* Color del texto */
+    text-decoration: none; /* Quitar subrayado */
+    border-radius: 1.3vh; /* Bordes redondeados */
+    transition: background-color 0.3s; /* Efecto de transición */
+    font-size: 2vh;
+}
+
+.boton:hover {
+    background-color: rgb(119, 237, 132); /* Cambiar color al pasar el mouse */
+}
+
+.imagen {
+    text-align: left;
+}
+
+.container {
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente (si hay altura) */
+    height: 28vh; /* Esto es solo para centrar verticalmente en toda la página */
+}

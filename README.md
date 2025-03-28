@@ -5,7 +5,7 @@
 + `Isidora Sarmiento   ` ROL: 202273650-k <br>
 + `María Marín         ` ROL: 202273544-9<br>
 + `Rodrigo Ramírez     ` ROL: 202273526-0 <br>
-+ `Tutor` Vicente Ruiz Aguayo 
++ `Tutor` Carlos Arevalo
   
 ## Wiki:
 **[Enlace a Wiki](https://github.com/isidoraoOo/GRUPO03-2024-PROYINF/wiki)**

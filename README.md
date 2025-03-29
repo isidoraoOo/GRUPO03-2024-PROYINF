@@ -7,7 +7,7 @@
 + `Rodrigo Ramírez     ` ROL: 202273526-0 <br>
 + `Profesor` Ricardo Salas Letelier
 + `Tutor` Carlos Arevalo
-  
+
 ## Wiki:
 **[Enlace a Wiki](https://github.com/isidoraoOo/GRUPO03-2024-PROYINF/wiki)**
 
